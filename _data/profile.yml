@@ -1,13 +1,12 @@
-primary_name: "Keyu Amber Liu "
+primary_name: "Keyu Amber Liu 刘珂妤"
 secondary_name: "刘珂妤"
 navbar_name: "Amber Liu"
 
+email: "kliu95@jhu.edu"
+
 positions:
 - name: intuitive psychology, biology, physics
-  logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
 
-
-email: "kliu95@jhu.edu"
 # cv_link: link-to-your-cv-file
 #gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
 #github: your_github_id
