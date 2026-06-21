@@ -91,3 +91,63 @@ div.lazy {
 .email-text {
     font-family: Source Code Pro, monospace;
 }
+
+/* ================================
+   Profile Image Hover Effect
+   ================================ */
+
+/* Desktop version */
+.profile-image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.profile-image-container .profile-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image-container .profile-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.profile-image-container:hover .profile-image-default {
+    opacity: 0;
+}
+
+.profile-image-container:hover .profile-image-hover {
+    opacity: 1;
+}
+
+/* Mobile version (circular) */
+.profile-image-container-mobile {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image-container-mobile .profile-image-hover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image-container-mobile .profile-image-default {
+    transition: opacity 0.3s ease;
+}
+
+.profile-image-container-mobile:hover .profile-image-default {
+    opacity: 0;
+}
+
+.profile-image-container-mobile:hover .profile-image-hover {
+    opacity: 1;
+}
