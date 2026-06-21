@@ -151,3 +151,7 @@ div.lazy {
 .profile-image-container-mobile:hover .profile-image-hover {
     opacity: 1;
 }
+
+.profile-image-container {
+    border: 5px solid red !important;
+}
