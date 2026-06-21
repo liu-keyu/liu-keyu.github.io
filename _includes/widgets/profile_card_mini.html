@@ -6,16 +6,39 @@
                     <div class="col">
                         {% if site.data.profile.portrait_url %}
                         <!-- When the screen is wider than md, float the portrait on the right -->
-                        <div class="figure d-none d-md-block">
-                            <img 
-                                src="{{ site.data.profile.portrait_url | relative_url }}" 
-                                class="figure-img img-fluid" 
-                                data-toggle="tooltip" 
-                                data-placement="top" 
-                                title="{{ site.data.profile.portrait_caption }}">
+                        <!-- Desktop version -->
+                      <div class="figure d-none d-md-block">
+                            <div class="profile-image-container">
+                                <img 
+                                    src="{{ site.data.profile.portrait_url | relative_url }}" 
+                                    class="figure-img img-fluid profile-image profile-image-default" 
+                                    data-toggle="tooltip" 
+                                    data-placement="top" 
+                                    title="{{ site.data.profile.portrait_caption }}">
+                                {% if site.data.profile.portrait_hover_url %}
+                                <img 
+                                    src="{{ site.data.profile.portrait_hover_url | relative_url }}" 
+                                    class="figure-img img-fluid profile-image profile-image-hover" 
+                                    alt="{{ site.data.profile.primary_name }}">
+                                {% endif %}
+                            </div>
                         </div>
+                        <!-- Mobile version -->
                         <div class="mb-3 d-md-none text-center">
-                            <img src="{{ site.data.profile.portrait_url | relative_url }}" class="rounded-circle" style="max-width: 50%;" alt="Portrait">
+                            <div class="profile-image-container-mobile">
+                                <img 
+                                    src="{{ site.data.profile.portrait_url | relative_url }}" 
+                                    class="rounded-circle profile-image profile-image-default" 
+                                    style="max-width: 50%;" 
+                                    alt="Portrait">
+                                {% if site.data.profile.portrait_hover_url %}
+                                <img 
+                                    src="{{ site.data.profile.portrait_hover_url | relative_url }}" 
+                                    class="rounded-circle profile-image profile-image-hover" 
+                                    style="max-width: 50%;" 
+                                    alt="Portrait">
+                                {% endif %}
+                            </div>
                         </div>
                         {% endif %}
                     </div>
